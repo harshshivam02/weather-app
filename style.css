@@ -1,0 +1,255 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #8a8989;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+/* Styling the search input and buttons */
+#weather-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#cityname {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 250px;
+  background-image: linear-gradient(to right, rgba(105, 79, 193, 0.826), rgba(29, 8, 65, 0.822));
+  color: white;
+  transition: 0.3s ease;
+}
+
+#cityname:focus {
+  outline: none;
+  border-color: #8a8989;
+}
+
+#search-btn {
+  padding: 10px 15px;
+  background-color: #00796b;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #006f63;
+}
+
+#current {
+  padding: 10px;
+  background-image: linear-gradient(to right, rgba(105, 79, 193, 0.826), rgba(29, 8, 65, 0.822));
+  color: black;
+  border: 2px solid white;
+  box-shadow: 2px 2px 2px rgba(242, 216, 216, 0.811);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#current img {
+  width: 25px;
+  height: 25px;
+}
+
+#current:hover {
+  background-color: #6a4fc1;
+  border-color: #ffffff;
+}
+
+/* Main weather data styles */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#weather-data {
+  border-radius: 10px;
+  background-image: linear-gradient(to right, rgba(105, 79, 193, 0.826), rgba(29, 8, 65, 0.822));
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+#weather-data div {
+  margin-bottom: 15px;
+}
+
+#weather-icon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+#city-name {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: white;
+}
+#cityname::placeholder {
+  color: white;
+  opacity: 1; /* Ensure the color is fully applied */
+}
+
+#temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white; /* Changed to white */
+}
+
+#description {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Wind and Humidity Data */
+#other-data, #humidity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wind-icon, #humidity-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#wind-speed, #humidity-value {
+  font-size: 1.1rem;
+}
+
+#wind-speed {
+  color: #03a9f4;
+}
+
+#humidity-value {
+  color: #009688;
+}
+
+/* Container styling */
+.matlb {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  margin: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Reduce size of search input and current button */
+  #cityname {
+    width: 200px;
+    padding: 8px;
+  }
+
+  #search-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  #current {
+    width: 45px;
+    height: 45px;
+  }
+
+  #current img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Adjust temperature font size */
+  #temperature {
+    font-size: 3rem; /* Increase size on smaller screens */
+  }
+
+  h1 {
+    font-size: 2rem; /* Responsive title */
+  }
+
+  .matlb {
+    width: 80%; /* Adjust the width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce size of search input and current button */
+  #cityname {
+    width: 160px;
+    padding: 6px;
+  }
+
+  #search-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  #current {
+    width: 40px;
+    height: 40px;
+  }
+
+  #current img {
+    width: 18px;
+    height: 18px;
+  }
+
+  #temperature {
+    font-size: 3.5rem; /* Further increase size on mobile */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .matlb {
+    width: 90%;
+  }
+
+  #weather-icon {
+    width: 150px;
+    height: 150px;
+  }
+}

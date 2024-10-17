@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <div class="matlb">
+    <header>
+      <form id="weather-search" action="">
+        <input id="cityname" type="text"  placeholder="search city"/>
+        <input type="submit" value="search" id="search-btn" />
+      </form>
+      <div>
+        <button id="current">
+          <img width="30px" heigth="30px" src="./118646.png" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+        <div id="weather-data">
+            <div>
+                <img id="weather-icon"  src="https://cdn-icons-png.flaticon.com/512/8179/8179067.png" alt="">
+               
+                <h2 id="temprature"></h2>
+                <p id="description"></p>
+                <h2 id="city-name"></h2>
+
+            </div>
+            <div class="other-data">
+            <div id="wind-data">
+               
+                <img id="wind-icon"src="https://www.clipartmax.com/png/middle/59-593346_wind-clipart-weather-symbol-windy-weather-icon.png" alt="">
+                <p id="wind-speed">2.0 M/s </p>
+            </div>
+            <div id="humidity">
+                <img id="humidity-icon"src="./Humidity.png" alt="humidity">
+                <p id="humidity-value">50%</p>
+
+
+            </div>
+          </div>
+        </div>
+    </main>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
